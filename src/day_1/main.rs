@@ -3,10 +3,29 @@ use std::time::Instant;
 fn main() {
     let input = include_str!("input");
 
-    let start_time = Instant::now();
-    println!("P1: {}", get_value(input, false));
-    println!("P2: {}", get_value(input, true));
-    println!("Took {} secs", start_time.elapsed().as_secs_f32());
+    let start = Instant::now();
+    let p1_answer = p1(input);
+    let p1_duration = start.elapsed().as_secs_f32();
+    println!("P1: {p1_answer}");
+    println!("Took {p1_duration} secs");
+
+    println!();
+
+    let start = Instant::now();
+    let p2_answer = p2(input);
+    let p2_duration = start.elapsed().as_secs_f32();
+    println!("P2: {p2_answer}");
+    println!("Took {p2_duration} secs");
+}
+
+
+fn p1(input: &str) -> String {
+    format!("{}", get_value(input, false))
+}
+
+
+fn p2(input: &str) -> String {
+    format!("{}", get_value(input, true))
 }
 
 
