@@ -4,6 +4,13 @@ fn main() {
     let input = include_str!("input");
 
     let start = Instant::now();
+    let parsed_input = parse_input(input);
+    let parse_duration = start.elapsed().as_secs_f32();
+    println!("Parsing took {parse_duration} secs");
+
+    println!();
+
+    let start = Instant::now();
     let p1_answer = p1(input);
     let p1_duration = start.elapsed().as_secs_f32();
     println!("P1: {p1_answer}");
