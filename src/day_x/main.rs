@@ -27,14 +27,18 @@ fn main() {
 
 
 fn p1(input: &str) -> String {
-    format!("{}", ())
+    format!("{}", 0)
 }
 
 
 fn p2(input: &str) -> String {
-    format!("{}", ())
+    format!("{}", 0)
 }
 
+
+fn parse_input(input: &str) -> () {
+    todo!()
+}
 
 
 #[cfg(test)]

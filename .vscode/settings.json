@@ -1,4 +1,5 @@
 {
     "rust-analyzer.diagnostics.useRustcErrorCode": true,
-    "salt.errorLogging": true
+    "salt.errorLogging": true,
+    "rust-analyzer.showUnlinkedFileNotification": false
 }
