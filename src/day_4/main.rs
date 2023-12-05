@@ -42,7 +42,7 @@ fn p1(input: &[Card]) -> String {
 
 
 fn p2(input: &[Card]) -> String {
-    format!("{}", get_total_cards(&input))
+    format!("{}", get_total_cards(input))
 }
 
 
@@ -53,8 +53,8 @@ struct Card {
 
 impl Card {
     pub fn new(winning_numbers: Vec<usize>, picked_numbers: Vec<usize>) -> Self {
-        let winning_set: HashSet<usize> = HashSet::from_iter(winning_numbers.into_iter());
-        let picked_set: HashSet<usize> = HashSet::from_iter(picked_numbers.into_iter());
+        let winning_set: HashSet<usize> = HashSet::from_iter(winning_numbers);
+        let picked_set: HashSet<usize> = HashSet::from_iter(picked_numbers);
         let matches = winning_set.intersection(&picked_set).count();
 
         Self { matches }
